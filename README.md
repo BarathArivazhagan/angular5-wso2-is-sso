@@ -1,7 +1,7 @@
-### <center> SSO login with WSO2 IS using angular5 web application <center>
+###  SSO login with WSO2 IS using angular5 web application 
 
 
-#### prerequisite:
+#### Prerequisite:
 
 ##### 1) Installation of JAVA
 
