@@ -21,10 +21,14 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
-    "angular-oauth2-oidc": ">=1.0.20",
+    "angular-oauth2-oidc": "^4.0.2",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19"
+    "zone.js": "^0.8.19",
+    "ng4-loading-spinner": "^1.2.3",
+    "popper.js": "^1.13.0",
+    "bootstrap": "^4.1.2",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "@angular/cli": "1.6.5",

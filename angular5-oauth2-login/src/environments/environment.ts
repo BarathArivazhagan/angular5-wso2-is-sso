@@ -5,7 +5,18 @@
 
 export const environment = {
   production: false,
-  clientId : '',
-  authorizeEndpoint : '',
-  redirectUri : ''
+  sso: {
+    clientId : 'YqtjQEFbJ67yn31xkedeVuZtW7Ya',
+    serverUrl: 'https://localhost:9443',
+    issuer :  '/oauth2/token',
+    redirectUri : window.location.origin + '/callback',
+    scope: 'openid profile',
+    tokenEndpoint:  '/oauth2/token',
+    userinfoEndpoint:  '/oauth2/userinfo',
+    authorizationEndpoint:  '/oauth2/authorize',
+    jwksEndpoint: '/oauth2/jwks',
+    showDebugInformation: true,
+    requireHttps: false,
+    responseType: 'id_token token'
+  }
 };
