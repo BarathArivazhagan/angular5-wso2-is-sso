@@ -52,6 +52,17 @@ $ npm install
 $ npm run start
 ```
 
+### Using Docker
+
+ WSO2 supports docker images 
+
+ * start identity server as docker container
+   
+   ```
+   $ docker run -d --name wso2-is -p 9443:9443 -t wso2/wso2is-km:5.6.0  
+   ```
+ 
+ 
 ### Configuration Guide
 
 * OAuth2 endpoints are configured in environment.ts file.
