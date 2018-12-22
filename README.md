@@ -38,11 +38,11 @@ $  /opt/wso2is-km-5.3.0/bin/wso2server.sh start
 * Click on Inbound Authentication configuration and then configure OAuth/OpenID configuration
 to generate client credentials
 
-![add_new_sp](../images/add_new_sp.png)
+![add_new_sp](images/add_new_sp.png)
 
 * Configure callback uri as http://localhost:4200/callback and click on Add button
 
-![add_new_app](../images/add_new_app.png)
+![add_new_app](images/add_new_app.png)
 
 ####  Start the angular app
 
