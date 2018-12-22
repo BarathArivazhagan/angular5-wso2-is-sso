@@ -95,15 +95,15 @@ you need to relax the rules to expose well known configuration uri.
 ```
 this.oauthService.loadDiscoveryDocumentAndTryLogin();
 ```
-[OpenID discovery](https://docs.wso2.com/display/IS530/OpenID+Connect+Discovery)
+  [OpenID discovery](https://docs.wso2.com/display/IS530/OpenID+Connect+Discovery)
 
 * Same goes with JWKS uri, enable JwksValidationHandler if jwks object is set as part of oauthconfig
 
 ```
 this.oauthService.tokenValidationHandler = new JwksValidationHandler()
 ```
-[JWKS configuration](https://docs.wso2.com/display/IS541/JSON+Web+Key+Set+Endpoint) <br>
-[JWKS uri](https://localhost:9443/oauth2/jwks)
+  [JWKS configuration](https://docs.wso2.com/display/IS541/JSON+Web+Key+Set+Endpoint) <br>
+  [JWKS uri](https://localhost:9443/oauth2/jwks)
 
 * OAuth2 default endpoints can be viewed under resident section 
 
