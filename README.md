@@ -52,17 +52,6 @@ $ npm install
 $ npm run start
 ```
 
-
-####  Test SSO navigation
-
-1) Hit the browser http://localhost:4200
-
-2) User will get redirected to WSO2 IS login page
-
-3) Enter the credentials to login admin/admin.
-
-4) Once login is successful, home page is shown with some inventories
-
 ### Configuration Guide
 
 * OAuth2 endpoints are configured in environment.ts file.
@@ -118,3 +107,12 @@ Session IFrame Endpoint URL:	https://localhost:9443/oidc/checksession
 Logout Endpoint URL:	https://localhost:9443/oidc/logout
 ```
 
+###  Test SSO navigation
+
+1) Hit the browser http://localhost:4200
+
+2) User will get redirected to WSO2 IS login page
+
+3) Enter the credentials to login admin/admin.
+
+4) Once login is successful, home page is shown with some inventories
