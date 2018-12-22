@@ -20,7 +20,6 @@ export class InventoryComponent implements OnInit {
 
   ngOnInit() {
 
-
    this.inventoryService.getInventories().subscribe( data => {
     console.log(' inventories ' + data);
     this.inventories = data;

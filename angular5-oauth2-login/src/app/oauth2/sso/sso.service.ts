@@ -15,10 +15,11 @@ export class SSOService {
   private configureOauthService() {
 
     this.oauthService.configure(authConfig);
-    this.oauthService.tokenValidationHandler = new JwksValidationHandler();
+    /** enable below validation only if jwks object is defined as part of oauthconfig obj */
+    // this.oauthService.tokenValidationHandler = new JwksValidationHandler();
     this.oauthService.setStorage(sessionStorage);
 
-    /** commented below because below resource is proected by some identity server ex: wso2 */
+    /** commented below because below resource is protected by some identity server ex: wso2 */
     //this.oauthService.loadDiscoveryDocumentAndTryLogin();
 
     this.oauthService.tryLogin({});

@@ -6,7 +6,7 @@
 export const environment = {
   production: false,
   sso: {
-    clientId : 'YqtjQEFbJ67yn31xkedeVuZtW7Ya',
+    clientId : 'WefVTffSCW8ss_gNLoagJ5CN6oAa',
     serverUrl: 'https://localhost:9443',
     issuer :  '/oauth2/token',
     redirectUri : window.location.origin + '/callback',
@@ -17,6 +17,7 @@ export const environment = {
     jwksEndpoint: '/oauth2/jwks',
     showDebugInformation: true,
     requireHttps: false,
-    responseType: 'id_token token'
+    responseType: 'id_token token',
+    jwks: {"keys":[{"kty":"RSA","e":"AQAB","use":"sig","kid":"d0ec514a32b6f88c0abd12a2840699bdd3deba9d","alg":"RS256","n":"AJSn-hXW9Zzz9ORBKIC9Oi6wzM4zhqwHaKW2vZAqjOeLlpUW7zXwyk4tkivwsydPNaWUm-9oDlEAB2lsQJv7jwWNsF7SGx5R03kenC-cf8Nbxlxwa-Tncjo6uruEsK_Vke244KiSCHP8BOuHI-r5CS0x9edFLgesoYlPPFoJxTs5"}]}
   }
 };
