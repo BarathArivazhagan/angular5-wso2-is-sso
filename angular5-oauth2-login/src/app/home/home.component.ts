@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AppService} from '../app.service';
+import { SSOService } from '../oauth2/sso/sso.service';
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
   selector: 'app-home',
@@ -9,20 +11,28 @@ import {AppService} from '../app.service';
 })
 export class HomeComponent implements OnInit {
 
-   public isLoggedIn = false;
+    public isLoggedIn = false;
+    public userName: string;
 
-    constructor(private _service: AppService) {}
+    constructor(private ssoService: SSOService, private spinner: Ng4LoadingSpinnerService) {}
 
     ngOnInit() {
-        this.isLoggedIn = this._service.isLoggedIn();
+
+        this.spinner.show();
+        this.isLoggedIn = this.ssoService.isLoggedIn();
+        if(!this.isLoggedIn) {
+           this.login();
+        }
+        this.userName = this.ssoService.getUserName();
+        this.spinner.hide();
     }
 
     login() {
-        this._service.obtainAccessToken();
+        this.ssoService.obtainAccessToken();
     }
 
     logout() {
-        this._service.logout();
+        this.ssoService.logout();
     }
 
 }

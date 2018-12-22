@@ -1,9 +1,8 @@
-<button *ngIf="!isLoggedIn" (click)="login()" type="submit">Login</button>
-    <div *ngIf="isLoggedIn">
-        <span>Welcome !!</span>
-        <a (click)="logout()" href="#">Logout</a>
-        <br/>
-        <app-inventory></app-inventory>
-    </div><p>
+<div class="row"*ngIf="isLoggedIn">
+      <div  class="row welcome"><span>Welcome {{userName}}!!</span> 
+            <a (click)="logout()" href="#">Logout</a>
+      </div>
+</div>
+<app-inventory></app-inventory>
+
   
-</p>

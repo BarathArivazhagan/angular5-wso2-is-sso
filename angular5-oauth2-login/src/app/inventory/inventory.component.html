@@ -1,6 +1,17 @@
-<h1>Foo Details</h1>
-    <label>ID</label> <span>{{inventory.inventoryId}}</span>
-    <label>ID</label> <span>{{inventory.productName}}</span>
-      <label>ID</label> <span>{{inventory.locationName}}</span>
- 
- 
+
+  <h2>Inventory Table</h2>
+  <table class="table table-bordered alignCenter">
+    <tr>
+      <th>S.NO</th>
+      <th>PRODUCT NAME</th> 
+      <th>LOCATION NAME</th>
+       <th>QUANTITY</th>
+    </tr>
+    <tr *ngFor="let inventory of inventories ; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{inventory.productName}}</td>
+      <td>{{inventory.locationName}}</td> 
+      <td>{{inventory.quantity}}</td>
+    </tr>
+   
+  </table>

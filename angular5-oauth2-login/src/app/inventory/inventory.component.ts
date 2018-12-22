@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Inventory} from './inventory.service';
+import {Inventory, InventoryService} from './inventory.service';
 import {AppService} from './../app.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,19 +12,32 @@ import {AppService} from './../app.service';
 })
 export class InventoryComponent implements OnInit {
 
-  public inventory = new Inventory(1, 'tv', 'chennai');
-    private foosUrl = 'http://localhost:8082/spring-security-oauth-resource/foos/';
+  public inventories: Inventory[];
+    
 
-    constructor(private _service: AppService) {}
+    constructor(private inventoryService: InventoryService) {}
 
-    getFoo() {
-        this._service.getResource(this.foosUrl + this.inventory.inventoryId)
-          .subscribe(
-            data => this.inventory = data,
-            error =>  console.log('error in get resource'));
-    }
 
   ngOnInit() {
+
+
+   this.inventoryService.getInventories().subscribe( data => {
+    console.log(' inventories ' + data);
+    this.inventories = data;
+  });
+
   }
 
+  // getResource(resourceUrl): Observable<Inventory> {
+
+  //   const reqHeaders =  { 'Content-type': 'application/x-www-form-urlencoded; charset=utf-8',
+  //                    'Authorization': 'Bearer ' + this.oauthService.getAccessToken()
+  //                   };
+  //   const httpOptions = {
+  //       headers: new HttpHeaders(reqHeaders)
+  //     };
+  //   return this._http.get(resourceUrl, httpOptions)
+  //     .map((res: Response) => res.json())
+  //     .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  // }
 }
