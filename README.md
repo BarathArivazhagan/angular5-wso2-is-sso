@@ -1,15 +1,16 @@
 # SSO OAuth2 login with WSO2 IS
 
-#### Prerequisite:
+### Prerequisites
+---
 
-##### 1) Installation of JAVA
+##### Installation of JAVA
 
 ```
 $ sudo yum install java-1.8.0-openjdk-devel
 ```
 
 
-##### 2) Installation of WSO2 IS with KM (key manager)
+##### Installation of WSO2 IS with KM (key manager)
 
 ```
 $ sudo su
@@ -19,13 +20,13 @@ $ unzip wso2is-km-5.3.0.zip
 ```
 
 
-####  Start the Identity Server
+### Start identity server
 
 ```
 $  /opt/wso2is-km-5.3.0/bin/wso2server.sh start
 ```
 
-#### Login to identity server and create a service provider as shown below
+### Service provider configuration
 
 * Login into https://localhost:9443/carbon 
 
@@ -38,11 +39,11 @@ https://localhost:9443/carbon/application/add-service-provider.jsp?region=region
 * Click on Inbound Authentication configuration and then configure OAuth/OpenID configuration
 to generate client credentials
 
-[add_new_sp](images/add_new_sp.png)
+(add_new_sp)[images/add_new_sp.png]
 
 * Configure callback uri as http://localhost:4200/callback and click on Add button
 
-[add_new_app](images/add_new_app.png)
+(add_new_app)[images/add_new_app.png]
 
 ####  Start the angular app
 
